@@ -1,0 +1,10 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/closest-neighbor-in-bst/1?page=1&category=Binary%20Search%20Tree,Segment-Tree,AVL-Tree&difficulty=Basic,Easy&status=unsolved&sortBy=submissions">Closest Neighbour in BST</a></h2><h3>Difficulty Level : Difficulty: Easy</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 14pt;">Given the <strong>root of a <a title="BST" href="https://www.geeksforgeeks.org/binary-search-tree-data-structure/" target="_blank" rel="noopener">binary search tree</a></strong> and a number <strong>n</strong>, find the greatest number in the binary search tree that is less than or equal to <strong>n</strong>.&nbsp;</span></p>
+<p><span style="font-size: 14pt;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 14pt;"><strong>Input: <br></strong><input style="white-space: normal;" alt="" src="http://contribute.geeksforgeeks.org/wp-content/uploads/g.png" type="image"><strong><br></strong>n = 24
+<strong>Output:</strong> 21
+<strong>Explanation :</strong> The greatest element in the tree which is less than or equal to 24, is 21. <br></span></pre>
+<pre><span style="font-size: 14pt;"><strong>Input :</strong> <br><input style="white-space: normal;" alt="" src="http://contribute.geeksforgeeks.org/wp-content/uploads/g.png" type="image"><br>n = 4
+<strong>Output:</strong> 3
+<strong>Explanation :</strong> The greatest element in the tree which is less than or equal to 4, is 3. </span></pre>
+<p><span style="font-size: 14pt;"><strong>Expected Time Complexity:&nbsp;</strong>O(h)<br><strong>Expected Auxiliary Space:&nbsp;</strong>O(h).</span></p>
+<p><span style="font-size: 14pt;"><strong>Constraints:</strong><br>1 &lt;= Number of nodes &lt;= 10<sup>5<br></sup>1 &lt;= Elements of the BST &lt;= 10<sup>5<br></sup>All nodes are unique in the BST</span><br><span style="font-size: 14pt;">&nbsp;</span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Binary Search Tree</code>&nbsp;<code>Tree</code>&nbsp;<code>Data Structures</code>&nbsp;
