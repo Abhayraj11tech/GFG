@@ -98,7 +98,9 @@ class GfG {
             else
                 System.out.println("false");
             t--;
-        }
+        
+System.out.println("~");
+}
     }
 }
 
@@ -108,9 +110,6 @@ class GfG {
 // User function Template for Java
 
 class Solution {
-    // Function to check whether a Binary Tree is BST or not.
-  
-  
     void inorder(Node node, ArrayList<Integer> arr) {
         if (node == null){
             return;
