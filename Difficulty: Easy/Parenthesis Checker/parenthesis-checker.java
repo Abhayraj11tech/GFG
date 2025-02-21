@@ -1,30 +1,28 @@
 //{ Driver Code Starts
-import java.util.*;
 import java.io.*;
 import java.lang.*;
+import java.util.*;
 
-class Driverclass
-{
-    public static void main(String args[])
-    {
+class Driverclass {
+    public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        
-        //Reading total number of testcases
-        int t= sc.nextInt();
-        
-        while(t-- >0)
-        {
-            //reading the string
+
+        // Reading total number of testcases
+        int t = sc.nextInt();
+
+        while (t-- > 0) {
+            // reading the string
             String st = sc.next();
-            
-            //calling ispar method of Paranthesis class 
-            //and printing "balanced" if it returns true
-            //else printing "not balanced"
-            if(new Solution().ispar(st) == true)
-                System.out.println("balanced");
+
+            // calling ispar method of Paranthesis class
+            // and printing "balanced" if it returns true
+            // else printing "not balanced"
+            if (new Solution().isBalanced(st) == true)
+                System.out.println("true");
             else
-                System.out.println("not balanced");
-        
+                System.out.println("false");
+
+            System.out.println("~");
         }
     }
 }
@@ -32,50 +30,27 @@ class Driverclass
 
 
 
-
-
-class Solution
-{
-     static boolean isMatching(char a, char b)
-    {
-        if(a == '(' && b == ')')
-            return true;
-        
-        if(a == '[' && b == ']')
-            return true;
-        
-        if(a == '{' && b == '}')
-            return true;
-        
-        return false;
-    }
-    //Function to check if brackets are balanced or not.
-    static boolean ispar(String x)
-    {
-        Deque<Character>stack=new ArrayDeque<>();
-        
-        boolean isEmpty=false;
-         boolean isMatching=false;
-        
-        for(int i=0;i<x.length();i++){
-            char n=x.charAt(i);
-            
-            if(n=='(' || n=='{' || n=='['){
-                stack.push(n);
+class Solution {
+    static boolean isBalanced(String s) {
+        // code here
+        Stack<Character> st = new Stack<>();
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='(' || s.charAt(i)=='{' || s.charAt(i)=='[' ){
+                st.push(s.charAt(i));
             }
             else{
-                if(stack.isEmpty()==true){
+                if(st.isEmpty()){
                     return false;
                 }
-                else if(isMatching(stack.peek(),n)==false){
+                char top = st.pop();
+                char c = s.charAt(i);
+                 if((c == ')' && top != '(') || 
+                   (c == '}' && top != '{') || 
+                   (c == ']' && top != '[')) {
                     return false;
-                }
-                else{
-                    stack.pop();
                 }
             }
         }
-        // add your code here
-        return(stack.isEmpty());
+        return st.isEmpty();
     }
 }
